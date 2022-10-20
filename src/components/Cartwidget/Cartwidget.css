@@ -1,0 +1,7 @@
+.cartIconContainer a img {
+    width: 50px;
+}
+.cartIconContainer{
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,26 @@
+nav{
+    background-color: #006eff;
+    display: flex;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    align-items: center;
+}
+ul li a{
+    color: #ffffff;
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+.imagenLogo{
+    
+    width: 50px;
+}
+.logoContainer{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
