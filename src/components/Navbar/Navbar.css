@@ -24,3 +24,6 @@ ul li{
     align-items: center;
     gap: 20px;
 }
+.logoContainer h2{
+    color: #ffffff;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import iconoPagina from "../../img/icono-de-la-pagina.svg"
 import Cartwidget from '../Cartwidget/Cartwidget'
 import "./Navbar.css"
@@ -13,9 +14,10 @@ function Navbar() {
             <h2>worldfish</h2>
         </div>
         <ul>
-            <li><a href='#'>pescaderia</a></li>
-            <li><a href='#'>polleria</a></li>
-            <li><a href='#'>carniceria</a></li>
+            <li><NavLink to="/">inicio</NavLink></li>
+            <li><NavLink to="/category/pescaderia">pescaderia</NavLink></li>
+            <li><NavLink to="/category/polleria">polleria</NavLink></li>
+            <li><NavLink to="/category/carniceria">carniceria</NavLink></li>
         </ul>
         <Cartwidget/>
     </nav>
