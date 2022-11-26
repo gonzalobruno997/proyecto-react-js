@@ -19,7 +19,9 @@ function Navbar() {
             <li><NavLink to="/category/polleria">polleria</NavLink></li>
             <li><NavLink to="/category/carniceria">carniceria</NavLink></li>
         </ul>
-        <Cartwidget/>
+        <NavLink className="cartLink" to="/cart"> 
+            <Cartwidget/> 
+        </NavLink>
     </nav>
     )
 }

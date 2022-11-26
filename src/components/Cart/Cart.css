@@ -1,0 +1,16 @@
+.carrito{
+    background-color:#006eff;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 5vh 0;
+    width: 90vw;
+    margin: 10vh auto;
+    border-radius: 10px;
+}
+.cartList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}

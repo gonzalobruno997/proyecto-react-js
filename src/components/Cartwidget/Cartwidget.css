@@ -1,7 +1,34 @@
-.cartIconContainer a img {
-    width: 50px;
+a .cartIconContainer img {
+    width: 36px;
 }
 .cartIconContainer{
     display: flex;
     align-items: center;
+}
+.cartLink{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.counter{
+    align-self: flex-start;
+    position: absolute;
+    top: 32px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 0px 5px;
+    border: solid black 1px;
+    font-size: 12px;
+}
+@media screen and (max-width: 720px){
+    .cartLink{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .counter{
+        top: 12px;
+    }
 }

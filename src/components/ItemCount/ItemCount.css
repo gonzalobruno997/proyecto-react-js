@@ -1,0 +1,5 @@
+.buttonContainer{
+    display: flex;
+    gap: 1vw;
+    margin-top: 1vh;
+}

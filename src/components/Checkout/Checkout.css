@@ -1,0 +1,66 @@
+.formularioCheckoutContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+}
+
+.formularioCheckout{
+    background-color: #006eff;
+    width: 80vw;
+    border-radius: 10px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vh 2vw;
+    gap: 3vh;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+    width: 80%;
+}
+.inputContainer input{
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    border-bottom: #ffffff 1px solid;
+    background-color: #006eff;
+}
+.inputContainer input::placeholder{
+    color: #e9e2e2;
+}
+.inputSubmit{
+    width: 200px;
+    align-self: center;
+    border: none;
+}
+.recibo{
+    background-color: #006eff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+    color: #ffffff;
+    width: 80vw;
+    padding-bottom: 10px;
+    padding: 20px;
+    gap: 2vh;
+}
+.comeback{
+    align-self: flex-end;
+    margin-right: 5vw;
+}
+.recibo .info{
+    background-color:#0553b9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2vh 3vw;
+    width: 90%;
+}

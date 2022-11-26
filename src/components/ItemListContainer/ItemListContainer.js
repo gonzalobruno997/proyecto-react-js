@@ -1,8 +1,35 @@
 import React,{useEffect,useState} from 'react'
 import { useParams } from 'react-router-dom'
 import Item from '../Item/Item'
-
+import {initializeApp} from "firebase/app"
+import {collection, getDocs, getFirestore, query, where} from "firebase/firestore"
+import firebaseConfig from '../../services/firebaseConfig'
 export default function ItemListContainer({greeting}) {
+  initializeApp(firebaseConfig)
+  const getProducts = (categoria) => {
+    const database = getFirestore()
+    const itemCollection = collection(database, "items")
+    const q = categoria && query (
+      itemCollection,
+      where("categoria", "==", categoria)
+    )
+    
+    return getDocs(q || itemCollection)
+  }
+  const {categoryId}=useParams()
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    getProducts (categoryId).then(
+      (snapshot) => {
+        setProducts(snapshot.docs.map((doc) => {return{...doc.data(), id:doc.id}}))
+      }
+    )
+  },[categoryId]) 
+  
+    
+  
+  
 
   const productos = [
     {nombre: "salmon rosado", precio: 4900, descripcion:"importado", categoria:"pescaderia", id:0},
@@ -19,17 +46,7 @@ export default function ItemListContainer({greeting}) {
     
 
   ]
-    const {categoryId}=useParams()
-    
-    const [products, setProducts] = useState(productos)
-    useEffect(()=>{
-      if(categoryId != undefined ){
-        setProducts(productos.filter((producto)=>producto.categoria === categoryId))
-      }else{
-        setProducts(productos)
-      }
-      
-    }, [categoryId])
+
     
   return (
     <div>

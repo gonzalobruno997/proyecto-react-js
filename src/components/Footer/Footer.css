@@ -1,0 +1,12 @@
+footer{
+    display: flex;
+    background-color: #006eff;
+    padding: 3vh 5vw;
+    justify-content: space-around;
+    margin-top: 10vh;
+} 
+
+
+.iconFooter{
+    width: 36px;
+}
